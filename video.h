@@ -11,7 +11,11 @@ public:
     uint32_t getDuree(void) const;
     void setDuree(uint32_t duree);
     void affiche(void) const;
+<<<<<<< HEAD
 protected:
+=======
+private:
+>>>>>>> 55d239dc23112ae28ecd1e48819ab2bcc96d8ab8
     uint32_t m_duree;  // durée en secondes
 };
 
