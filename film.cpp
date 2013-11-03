@@ -22,6 +22,7 @@ void Film::setDureesChapitres(uint16_t* dureesChapitres, uint8_t nbChapitres)
 {
     delete m_dureesChapitres;
 
+    m_nbChapitres = nbChapitres;
     m_dureesChapitres = new uint16_t[nbChapitres];
 
     for(uint8_t i = 0; i<nbChapitres; ++i )
