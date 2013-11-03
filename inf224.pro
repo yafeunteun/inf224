@@ -6,10 +6,11 @@ CONFIG -= qt
 SOURCES += main.cpp \
     multimedia.cpp \
     video.cpp \
-    photo.cpp
+    photo.cpp \
+    film.cpp
 
 HEADERS += \
     multimedia.h \
     video.h \
-    photo.h
-
+    photo.h \
+    film.h
