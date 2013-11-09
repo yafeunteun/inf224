@@ -14,7 +14,7 @@ using namespace std;
 
 
 int main()
-{
+{/*
     Film* f1 = new Film("Pearl Harbor", 0, "/home/yafeunteun/Videos/ph.avi", 183*60 );
     Film* f2 = new Film("Armageddon", 0, "/home/yafeunteun/Videos/argd.avi", 145*60 );
     Film* f3 = new Film("Gladiator", 0, "/home/yafeunteun/Videos/gldr.avi", 155*60);
@@ -42,6 +42,32 @@ int main()
     f2->affiche();
     f3->affiche();
 
+    delete f1;
+    delete f2;
+    delete f3;
+*/
+    Film* f1 = new Film("Pearl Harbor", 0, "/home/yafeunteun/Videos/ph.avi", 183*60 );
+
+
+    uint16_t* tabChap1 = new uint16_t[7];
+
+    for(unsigned char i = 0; i < 7; ++i )
+        tabChap1[i] = 21;
+    f1->setDureesChapitres(tabChap1, 7);
+    delete tabChap1;
+
+    Film* f2 = new Film(*f1);
+    Film* f3 = new Film("Gladiator", 0, "/home/yafeunteun/Videos/gldr.avi", 155*60);
+
+    *f3 = *f2;
+
+    f1->affiche();
+    delete f1;
+    f2->affiche();
+    delete f2;
+
+    f3->affiche();
+    delete f3;
 
     return 0;
 }

@@ -11,6 +11,11 @@ Video::Video(string nom, unsigned long long int date, string pathname, uint32_t 
     m_duree = duree;
 }
 
+Video::~Video()
+{
+    cout<<"Video::~Video() has destroyed : "<<this<<endl;
+}
+
 
 uint32_t Video::getDuree(void) const
 {
