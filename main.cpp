@@ -6,68 +6,27 @@
 
 using namespace std;
 
-// PROTOCOLE DE TEST DE L ETAPE 6 :
-
-// Implementez votre classe et vérifiez que le resultat est correct en détruisant le tableau passé en argument dans main()
-    // puis en appelant la fonction d'affichage de l'objet (NB: il faut répéter ces opérations pour plusieurs objets pour être sûr
-    // qu'il n'y a pas d'erreur à l'exécution).
-
 
 int main()
-{/*
-    Film* f1 = new Film("Pearl Harbor", 0, "/home/yafeunteun/Videos/ph.avi", 183*60 );
-    Film* f2 = new Film("Armageddon", 0, "/home/yafeunteun/Videos/argd.avi", 145*60 );
-    Film* f3 = new Film("Gladiator", 0, "/home/yafeunteun/Videos/gldr.avi", 155*60);
+{
 
-    uint16_t* tabChap1 = new uint16_t[7];
-    uint16_t* tabChap2 = new uint16_t[7];
-    uint16_t* tabChap3 = new uint16_t[7];
-
-    for(unsigned char i = 0; i < 7; ++i )
+    Film * v1 = new Film("Pearl Harbor", 0, "/home/yafeunteun/Vidéo/pearlharbor_2001.avi", 210*60);
+    v1->affiche();
+    if(!(v1->play()))
     {
-        tabChap1[i] = 21;
-        tabChap2[i] = 15;
-        tabChap3[i] = 17;
+        cerr<<"Erreur lors de l'ouverture du fichier "<<v1->getNom()<<endl;
     }
 
-    f1->setDureesChapitres(tabChap1, 7);
-    f2->setDureesChapitres(tabChap2, 7);
-    f3->setDureesChapitres(tabChap3, 7);
+    delete v1;
 
-    delete tabChap1;
-    delete tabChap2;
-    delete tabChap3;
+    Photo * p1 = new Photo("Oléron", 0, "/home/yafeunteun/Bureau/282.JPG", "Oléron");
+    p1->affiche();
+    if(!(p1->play()))
+    {
+        cerr<<"Erreur lors de l'ouverture du fichier "<<p1->getNom()<<endl;
+    }
 
-    f1->affiche();
-    f2->affiche();
-    f3->affiche();
-
-    delete f1;
-    delete f2;
-    delete f3;
-*/
-    Film* f1 = new Film("Pearl Harbor", 0, "/home/yafeunteun/Videos/ph.avi", 183*60 );
-
-
-    uint16_t* tabChap1 = new uint16_t[7];
-
-    for(unsigned char i = 0; i < 7; ++i )
-        tabChap1[i] = 21;
-    f1->setDureesChapitres(tabChap1, 7);
-    delete tabChap1;
-
-    Film* f2 = new Film(*f1);
-    Film* f3 = new Film("Gladiator", 0, "/home/yafeunteun/Videos/gldr.avi", 155*60);
-
-    *f3 = *f2;
-
-    f1->affiche();
-    delete f1;
-    f2->affiche();
-    delete f2;
-
-    f3->affiche();
-    delete f3;
+    delete p1;
 
     return 0;
 }
