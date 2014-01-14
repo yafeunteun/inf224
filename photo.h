@@ -22,7 +22,8 @@
 class Photo : public Multimedia
 {
 public:
-    Photo(const string& nom = "Photo de profil", const unsigned long long int date = 0, const string& pathname = "./profile.jpeg", const string& localisation = "Bretagne");
+    Photo() : Photo("Photo de profil", 0, "./profile.jpeg", "Bretagne"){}
+    Photo(const string& nom, const unsigned long long int date, const string& pathname, const string& localisation);
     const string getLocalisation(void) const;
     void setLocalisation(const string& localisation);
     void affiche(void) const;

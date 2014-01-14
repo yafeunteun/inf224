@@ -15,7 +15,7 @@ int main()
 
     Photo * p1 = new Photo("Oléron", 0, "/home/yafeunteun/Bureau/282.JPG", "Oléron");
 
-
+/*
     Groupe *g = new Groupe("Mes Documents");
 
     cout<<"Nom du groupe : "<<g->getNom()<<endl<<endl;
@@ -23,7 +23,7 @@ int main()
     g->push_back(p1);
 
     g->Affichage();
-
+*/
     return 0;
 }
 
