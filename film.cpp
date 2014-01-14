@@ -7,22 +7,6 @@ using std::cout;
 using std::endl;
 
 
-/*!
-*  \brief Constructeur
-*
-*  Construit un objet Film suivant les paramètres donnés.
-*
-*  \param nom : Le nom du film.
-*  \param date : Date d'acquisition comptée en secondes depuis le 1er janvier 1970.
-*  \param pathname : Le nom du fichier associé au film. Il s'agit du chemin complet (pathname) permettant d'accéder à ce fichier dans le système de fichiers Unix.
-*  \param duree : la durée du film en secondes.
-*/
-Film::Film(const string& nom, const unsigned long long int date, const string& pathname, const uint32_t duree)
-    : Video(nom, date, pathname, duree)
-{
-    m_dureesChapitres = 0;
-}
-
 
 /*!
 *  \brief Constructeur

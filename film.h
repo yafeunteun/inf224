@@ -25,7 +25,7 @@ private:
     uint16_t* m_dureesChapitres;       // tableau contenant la durée de chaque chapitres.
     uint8_t m_nbChapitres;              // contient le nombre de chapitres i.e la taille du tableau de chapitres.
 public:
-    Film(const string& nom, const unsigned long long date, const string& pathname, const uint32_t duree);
+    using Video::Video;                 // Héritage des constructeurs de la classe mère (pur C++ 2011)
     Film(const string& nom, const unsigned long long date, const string& pathname, const uint32_t duree,  uint16_t* dureesChapitres, const uint8_t nbChapitres );
     Film(const Film& f);
     virtual ~Film();
